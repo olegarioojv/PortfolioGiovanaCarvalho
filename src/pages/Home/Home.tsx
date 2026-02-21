@@ -1,6 +1,7 @@
 //components
 import Navbar from "../../components/Navbar/Navbar";
 import About from "../../components/About/About";
+import Footer from "../../components/Footer/Footer";
 
 //styles
 import {
@@ -59,8 +60,8 @@ function Home() {
           </ImageContainer>
         </HeroContainer>
       </Hero>
-
       <About />
+      <Footer />
     </>
   );
 }

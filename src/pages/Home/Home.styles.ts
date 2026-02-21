@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-/* HERO */
 export const Hero = styled.section`
   display: flex;
   justify-content: center;
@@ -9,7 +8,6 @@ export const Hero = styled.section`
   padding: 0 20px;
 `;
 
-/* CONTAINER */
 export const HeroContainer = styled.div`
   width: 100%;
   max-width: 1200px;
@@ -31,7 +29,6 @@ export const HeroContainer = styled.div`
   }
 `;
 
-/* CONTENT */
 export const Content = styled.div`
   display: flex;
   flex-direction: column;
@@ -75,7 +72,6 @@ export const Description = styled.p`
   }
 `;
 
-/* BUTTONS */
 export const Buttons = styled.div`
   display: flex;
   gap: 16px;
@@ -125,7 +121,6 @@ export const ProjectButton = styled(BaseButton)`
   }
 `;
 
-/* IMAGE */
 export const ImageContainer = styled.div`
   position: relative;
   width: 320px;
