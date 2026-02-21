@@ -71,23 +71,23 @@ function About() {
   const contactData = [
     {
       icons: <Globe size={28} />,
-      text: "www.leticiasmirelli.com",
+      text: "giovanacarvalhoio.vercel.app",
     },
     {
       icons: <Instagram size={28} />,
-      text: "@leticiasmirelli",
+      text: "@stcliffx",
     },
     {
       icons: <Phone size={28} />,
-      text: "+55 (19) 9444-4444",
+      text: "+55 (11) 97897-4523",
     },
     {
       icons: <Mail size={28} />,
-      text: "contato@leticiasmirelli.com",
+      text: "giovanarocha365@gmail.com",
     },
     {
       icons: <Linkedin size={28} />,
-      text: "/LeticiaSmirelli",
+      text: "@Giovana Carvalho",
     },
   ];
 
