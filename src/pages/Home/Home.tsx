@@ -34,7 +34,7 @@ function Home() {
     greeting: "Olá! Meu nome é",
     title: "Giovana Carvalho",
     description:
-      "Especialista em Power BI certificada pela Microsoft. Desenvolvo dashboards interativos e automatizados para diferentes áreas de negócio.",
+      "Desenvolvimento de profissionais especializados no mundo dos dados e Power BI",
     src: profileImg,
   };
 
