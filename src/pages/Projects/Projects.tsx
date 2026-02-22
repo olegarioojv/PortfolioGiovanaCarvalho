@@ -48,7 +48,7 @@ function Projects() {
     },
     {
       title: "Sistema Financeiro",
-      subTitle: "Gestão e relatórios:",
+      subTitle: "Objetivos principais e indicadores:",
       description: "Aplicação para controle financeiro e métricas.",
       image:
         "https://dashboardacademy.com.br/wp-content/uploads/2023/09/inspiracao-para-dashboard-gerencial-modelo-3.png",
@@ -57,7 +57,7 @@ function Projects() {
     },
     {
       title: "App Mobile",
-      subTitle: "Experiência do usuário:",
+      subTitle: "Objetivos principais e indicadores:",
       description: "Interface moderna focada em UX/UI.",
       image:
         "https://dashboardacademy.com.br/wp-content/uploads/2023/09/inspiracao-para-dashboard-gerencial-modelo-3.png",
@@ -66,7 +66,7 @@ function Projects() {
     },
     {
       title: "Landing Page",
-      subTitle: "Conversão:",
+      subTitle: "Objetivos principais e indicadores:",
       description: "Página otimizada para marketing.",
       image:
         "https://dashboardacademy.com.br/wp-content/uploads/2023/09/inspiracao-para-dashboard-gerencial-modelo-3.png",
@@ -75,7 +75,7 @@ function Projects() {
     },
     {
       title: "Dashboard Analytics",
-      subTitle: "Indicadores:",
+      subTitle: "Objetivos principais e indicadores:",
       description: "Visualização estratégica de métricas.",
       image:
         "https://dashboardacademy.com.br/wp-content/uploads/2023/09/inspiracao-para-dashboard-gerencial-modelo-3.png",
@@ -84,7 +84,7 @@ function Projects() {
     },
     {
       title: "Projeto Extra",
-      subTitle: "Paginação:",
+      subTitle: "Objetivos principais e indicadores:",
       description: "Projeto adicional para teste de páginas.",
       image:
         "https://dashboardacademy.com.br/wp-content/uploads/2023/09/inspiracao-para-dashboard-gerencial-modelo-3.png",
@@ -93,7 +93,7 @@ function Projects() {
     },
     {
       title: "Projeto Extra",
-      subTitle: "Paginação:",
+      subTitle: "Objetivos principais e indicadores:",
       description: "Projeto adicional para teste de páginas.",
       image:
         "https://dashboardacademy.com.br/wp-content/uploads/2023/09/inspiracao-para-dashboard-gerencial-modelo-3.png",
