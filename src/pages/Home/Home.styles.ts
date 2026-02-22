@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+interface ButtonProps {
+  active?: boolean;
+}
+
 export const Hero = styled.section`
   display: flex;
   justify-content: center;
@@ -82,7 +86,7 @@ export const Buttons = styled.div`
   }
 `;
 
-const BaseButton = styled.button`
+const BaseButton = styled.button<ButtonProps>`
   padding: 14px 26px;
   border-radius: 10px;
   cursor: pointer;
@@ -100,9 +104,9 @@ const BaseButton = styled.button`
 `;
 
 export const AboutButton = styled(BaseButton)`
-  background-color: #3b82f6;
+  background-color: ${({ active }) => (active ? "#3b82f6" : "transparent")};
   color: white;
-  border: none;
+  border: ${({ active }) => (active ? "none" : "2px solid #3b82f6")};
 
   &:hover {
     background-color: #2563eb;
@@ -111,9 +115,9 @@ export const AboutButton = styled(BaseButton)`
 `;
 
 export const ProjectButton = styled(BaseButton)`
-  background-color: transparent;
+  background-color: ${({ active }) => (active ? "#3b82f6" : "transparent")};
   color: white;
-  border: 2px solid #3b82f6;
+  border: ${({ active }) => (active ? "none" : "2px solid #3b82f6")};
 
   &:hover {
     background-color: rgba(59, 130, 246, 0.15);

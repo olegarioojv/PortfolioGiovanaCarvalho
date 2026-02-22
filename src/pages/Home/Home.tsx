@@ -1,3 +1,5 @@
+import { useLocation, useNavigate } from "react-router-dom";
+
 //components
 import Navbar from "../../components/Navbar/Navbar";
 import About from "../../components/About/About";
@@ -25,6 +27,9 @@ import { User, Eye } from "lucide-react";
 import profileImg from "../../assets/img/profile.jpeg";
 
 function Home() {
+  const location = useLocation();
+  const navigate = useNavigate();
+
   const heroData = {
     greeting: "Olá! Meu nome é",
     title: "Giovana Carvalho",
@@ -44,11 +49,16 @@ function Home() {
             <Description>{heroData.description}</Description>
 
             <Buttons>
-              <AboutButton>
+              <AboutButton
+                active={location.pathname === "/"}
+                onClick={() => navigate("/")}>
                 Sobre mim
                 <User size={18} />
               </AboutButton>
-              <ProjectButton>
+
+              <ProjectButton
+                active={location.pathname === "/projects"}
+                onClick={() => navigate("/projects")}>
                 Projetos
                 <Eye size={18} />
               </ProjectButton>

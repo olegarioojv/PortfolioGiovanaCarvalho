@@ -30,11 +30,11 @@ import {
 } from "lucide-react";
 
 function About() {
-  const AboutDate = {
+  const AboutData = {
     title_about: "| Sobre mim:",
     greeting:
       "Seja muito bem vindo(a) ao meu portfólio. Conheça um pouco da minha história:",
-    experienceAge: "8+",
+    experienceAge: "1+",
     experience:
       "Anos de experiência profissional em Supply Chain, com histórico de atuação como líder de projetos em multinacionais como Bosch e Honda. Trabalho com o Power BI desde 2017 e sou apaixonada pelo universo de DataViz e design de dashboards. Desde Junho/2021 concentro toda a minha energia em treinamentos e desenvolvimento de profissionais que queriam se especializar no mundo dos dados e Power BI.",
     title_skills: "| Principais habilidades:",
@@ -93,13 +93,13 @@ function About() {
 
   return (
     <AboutContainer>
-      <TitleAbout>{AboutDate.title_about}</TitleAbout>
-      <Greeting>{AboutDate.greeting}</Greeting>
+      <TitleAbout>{AboutData.title_about}</TitleAbout>
+      <Greeting>{AboutData.greeting}</Greeting>
       <ExperienceContainer>
-        <ExperienceAge>{AboutDate.experienceAge}</ExperienceAge>
-        <Experience>{AboutDate.experience}</Experience>
+        <ExperienceAge>{AboutData.experienceAge}</ExperienceAge>
+        <Experience>{AboutData.experience}</Experience>
       </ExperienceContainer>
-      <TitleAbout>{AboutDate.title_skills}</TitleAbout>
+      <TitleAbout>{AboutData.title_skills}</TitleAbout>
       <SkillContainer>
         {skillsData.map((skills, index) => (
           <SkillCard key={index}>
@@ -110,7 +110,7 @@ function About() {
         ))}
       </SkillContainer>
       <ContactContainer>
-        <TitleAbout>{AboutDate.title_contact}</TitleAbout>
+        <TitleAbout>{AboutData.title_contact}</TitleAbout>
 
         <ContactList>
           {contactData.map((contact, index) => (

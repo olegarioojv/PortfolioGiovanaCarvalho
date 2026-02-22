@@ -1,15 +1,18 @@
+import { useNavigate } from "react-router-dom";
 import { FooterButton, FooterContainer } from "./Footer.styles";
 import { Eye } from "lucide-react";
 
 function Footer() {
-  const FooterDate = {
+  const navigate = useNavigate();
+
+  const FooterData = {
     text: "Clique aqui para visualizar os meus projetos",
   };
 
   return (
     <FooterContainer>
-      <FooterButton>
-        {FooterDate.text}
+      <FooterButton onClick={() => navigate("/projects")}>
+        {FooterData.text}
         <Eye size={16} />
       </FooterButton>
     </FooterContainer>
