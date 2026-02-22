@@ -146,3 +146,46 @@ export const ProjectsButton = styled.button`
     filter: brightness(1.05);
   }
 `;
+export const PaginationContainer = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  background: #212135;
+
+  padding: 10px 0 30px;
+  color: white;
+
+  @media (max-width: 500px) {
+    gap: 10px;
+    font-size: 14px;
+  }
+`;
+
+export const PaginationButton = styled.button`
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: white;
+
+  padding: 6px 12px;
+  border-radius: 8px;
+
+  cursor: pointer;
+  transition: 0.15s ease;
+
+  &:hover:not(:disabled) {
+    background: rgba(59, 130, 246, 0.15);
+    border-color: rgba(59, 130, 246, 0.6);
+  }
+
+  &:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+  }
+`;
+
+export const PaginationInfo = styled.span`
+  opacity: 0.85;
+  font-size: 14px;
+`;

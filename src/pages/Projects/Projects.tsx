@@ -1,4 +1,5 @@
 import { useLocation, useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 // Icon
 import { Eye, User } from "lucide-react";
@@ -7,7 +8,7 @@ import { Eye, User } from "lucide-react";
 import { AboutButton, Buttons, ProjectButton } from "../Home/Home.styles";
 import Navbar from "../../components/Navbar/Navbar";
 
-//Styles
+// Styles
 import {
   ProjectsContent,
   ProjectsConteiner,
@@ -19,6 +20,9 @@ import {
   ProjectDescription,
   ProjectsButton,
   ProjectsMenu,
+  PaginationContainer,
+  PaginationButton,
+  PaginationInfo,
 } from "./Projects.styles";
 
 // Footer
@@ -29,56 +33,80 @@ function Projects() {
   const navigate = useNavigate();
 
   const ProjectsData = {
-    text: "Explore alguns projetos que já desenvolvi: ",
+    text: "Explore alguns projetos que já desenvolvi:",
   };
 
   const ProjectsListData = [
     {
       title: "Dashboard de Vendas",
       subTitle: "Objetivos principais e indicadores:",
-      description:
-        "Desenvolvimento de um dashboard interativo para análise de vendas, utilizando Power BI. O projeto envolveu a integração de múltiplas fontes de dados, criação de visualizações personalizadas e implementação de filtros avançados para facilitar a tomada de decisões estratégicas.",
+      description: "Desenvolvimento de dashboard interativo com Power BI.",
       image:
         "https://dashboardacademy.com.br/wp-content/uploads/2023/09/inspiracao-para-dashboard-gerencial-modelo-3.png",
       buttonText: "Clique para interagir",
     },
     {
-      title: "Dashboard de Vendas",
-      subTitle: "Objetivos principais e indicadores:",
-      description:
-        "Desenvolvimento de um dashboard interativo para análise de vendas, utilizando Power BI. O projeto envolveu a integração de múltiplas fontes de dados, criação de visualizações personalizadas e implementação de filtros avançados para facilitar a tomada de decisões estratégicas.",
+      title: "Sistema Financeiro",
+      subTitle: "Gestão e relatórios:",
+      description: "Aplicação para controle financeiro e métricas.",
       image:
         "https://dashboardacademy.com.br/wp-content/uploads/2023/09/inspiracao-para-dashboard-gerencial-modelo-3.png",
-      buttonText: "Clique para interagir",
+      buttonText: "Ver detalhes",
     },
     {
-      title: "Dashboard de Vendas",
-      subTitle: "Objetivos principais e indicadores:",
-      description:
-        "Desenvolvimento de um dashboard interativo para análise de vendas, utilizando Power BI. O projeto envolveu a integração de múltiplas fontes de dados, criação de visualizações personalizadas e implementação de filtros avançados para facilitar a tomada de decisões estratégicas.",
+      title: "App Mobile",
+      subTitle: "Experiência do usuário:",
+      description: "Interface moderna focada em UX/UI.",
       image:
         "https://dashboardacademy.com.br/wp-content/uploads/2023/09/inspiracao-para-dashboard-gerencial-modelo-3.png",
-      buttonText: "Clique para interagir",
+      buttonText: "Explorar",
     },
     {
-      title: "Dashboard de Vendas",
-      subTitle: "Objetivos principais e indicadores:",
-      description:
-        "Desenvolvimento de um dashboard interativo para análise de vendas, utilizando Power BI. O projeto envolveu a integração de múltiplas fontes de dados, criação de visualizações personalizadas e implementação de filtros avançados para facilitar a tomada de decisões estratégicas.",
+      title: "Landing Page",
+      subTitle: "Conversão:",
+      description: "Página otimizada para marketing.",
       image:
         "https://dashboardacademy.com.br/wp-content/uploads/2023/09/inspiracao-para-dashboard-gerencial-modelo-3.png",
-      buttonText: "Clique para interagir",
+      buttonText: "Abrir",
     },
     {
-      title: "Dashboard de Vendas",
-      subTitle: "Objetivos principais e indicadores:",
-      description:
-        "Desenvolvimento de um dashboard interativo para análise de vendas, utilizando Power BI. O projeto envolveu a integração de múltiplas fontes de dados, criação de visualizações personalizadas e implementação de filtros avançados para facilitar a tomada de decisões estratégicas.",
+      title: "Dashboard Analytics",
+      subTitle: "Indicadores:",
+      description: "Visualização estratégica de métricas.",
       image:
         "https://dashboardacademy.com.br/wp-content/uploads/2023/09/inspiracao-para-dashboard-gerencial-modelo-3.png",
-      buttonText: "Clique para interagir",
+      buttonText: "Interagir",
+    },
+    {
+      title: "Projeto Extra",
+      subTitle: "Paginação:",
+      description: "Projeto adicional para teste de páginas.",
+      image:
+        "https://dashboardacademy.com.br/wp-content/uploads/2023/09/inspiracao-para-dashboard-gerencial-modelo-3.png",
+      buttonText: "Ver projeto",
+    },
+    {
+      title: "Projeto Extra",
+      subTitle: "Paginação:",
+      description: "Projeto adicional para teste de páginas.",
+      image:
+        "https://dashboardacademy.com.br/wp-content/uploads/2023/09/inspiracao-para-dashboard-gerencial-modelo-3.png",
+      buttonText: "Ver projeto",
     },
   ];
+
+  const [currentPage, setCurrentPage] = useState(1);
+  const projectsPerPage = 5;
+
+  const indexOfLastProject = currentPage * projectsPerPage;
+  const indexOfFirstProject = indexOfLastProject - projectsPerPage;
+
+  const currentProjects = ProjectsListData.slice(
+    indexOfFirstProject,
+    indexOfLastProject,
+  );
+
+  const totalPages = Math.ceil(ProjectsListData.length / projectsPerPage);
 
   return (
     <>
@@ -101,11 +129,13 @@ function Projects() {
           </ProjectButton>
         </Buttons>
       </ProjectsMenu>
+
       <ProjectsConteiner>
         <ProjectsList>
-          {ProjectsListData.map((projects, index) => (
+          {currentProjects.map((projects, index) => (
             <ProjectsCard key={index}>
               <ProjectImg src={projects.image} alt={projects.title} />
+
               <ProjectsContent>
                 <ProjectTitle>{projects.title}</ProjectTitle>
                 <ProjectSubTitle>{projects.subTitle}</ProjectSubTitle>
@@ -116,6 +146,23 @@ function Projects() {
           ))}
         </ProjectsList>
       </ProjectsConteiner>
+      <PaginationContainer>
+        <PaginationButton
+          disabled={currentPage === 1}
+          onClick={() => setCurrentPage(currentPage - 1)}>
+          ◀ Anterior
+        </PaginationButton>
+
+        <PaginationInfo>
+          Página {currentPage} / {totalPages}
+        </PaginationInfo>
+
+        <PaginationButton
+          disabled={currentPage === totalPages}
+          onClick={() => setCurrentPage(currentPage + 1)}>
+          Próxima ▶
+        </PaginationButton>
+      </PaginationContainer>
       <FooterProjects />
     </>
   );
