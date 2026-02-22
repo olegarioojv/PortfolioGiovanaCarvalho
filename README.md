@@ -1,46 +1,91 @@
-# Getting Started with Create React App
+# 💼 Portfólio – Giovana Carvalho
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este projeto consiste em um portfólio pessoal desenvolvido com o objetivo de apresentar projetos, habilidades e informações profissionais de maneira moderna, responsiva e visualmente organizada.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Tecnologias Utilizadas
 
-### `npm start`
+Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- React
+- TypeScript
+- Styled Components
+- React Router
+- Lucide React (ícones)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+---
 
-### `npm test`
+## 🎯 Objetivo do Projeto
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+O portfólio foi criado para servir como vitrine profissional, permitindo:
 
-### `npm run build`
+✔ Exibição de projetos desenvolvidos  
+✔ Apresentação de habilidades e competências  
+✔ Disponibilização de informações de contato  
+✔ Demonstração de conhecimento técnico
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🖥️ Interface e Experiência
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+A interface segue um padrão moderno de design:
 
-### `npm run eject`
+- Tema escuro
+- Layout limpo e minimalista
+- Componentes reutilizáveis
+- Totalmente responsivo (Desktop / Tablet / Mobile)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+---
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## ⚙️ Como Executar o Projeto
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Clone o repositório:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```bash
+git clone https://github.com/olegarioojv/PortfolioGiovanaCarvalho.git
+```
 
-## Learn More
+Acesse o diretório:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+cd PortfolioGiovanaCarvalho
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Instale as dependências:
+
+```bash
+npm install
+```
+
+Execute o projeto:
+
+```bash
+npm start
+```
+
+A aplicação estará disponível em:
+
+http://localhost:3000
+
+---
+
+## 🌎 Deploy
+
+O projeto pode ser facilmente hospedado em plataformas modernas:
+
+- Vercel
+
+---
+
+## 📬 Contato
+
+Para contato profissional:
+
+📧 Email: olegarioo.dev@gmail.com
+
+---
+
+## 📄 Licença
+
+Este projeto possui finalidade educacional e demonstrativa.
