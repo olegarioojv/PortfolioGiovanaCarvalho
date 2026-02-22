@@ -44,6 +44,7 @@ function Projects() {
       image:
         "https://dashboardacademy.com.br/wp-content/uploads/2023/09/inspiracao-para-dashboard-gerencial-modelo-3.png",
       buttonText: "Clique para interagir",
+      url: "https://www.google.com",
     },
     {
       title: "Sistema Financeiro",
@@ -51,7 +52,8 @@ function Projects() {
       description: "Aplicação para controle financeiro e métricas.",
       image:
         "https://dashboardacademy.com.br/wp-content/uploads/2023/09/inspiracao-para-dashboard-gerencial-modelo-3.png",
-      buttonText: "Ver detalhes",
+      buttonText: "Clique para interagir",
+      url: "https://www.google.com",
     },
     {
       title: "App Mobile",
@@ -59,7 +61,8 @@ function Projects() {
       description: "Interface moderna focada em UX/UI.",
       image:
         "https://dashboardacademy.com.br/wp-content/uploads/2023/09/inspiracao-para-dashboard-gerencial-modelo-3.png",
-      buttonText: "Explorar",
+      buttonText: "Clique para interagir",
+      url: "https://www.google.com",
     },
     {
       title: "Landing Page",
@@ -67,7 +70,8 @@ function Projects() {
       description: "Página otimizada para marketing.",
       image:
         "https://dashboardacademy.com.br/wp-content/uploads/2023/09/inspiracao-para-dashboard-gerencial-modelo-3.png",
-      buttonText: "Abrir",
+      buttonText: "Clique para interagir",
+      url: "https://www.google.com",
     },
     {
       title: "Dashboard Analytics",
@@ -75,7 +79,8 @@ function Projects() {
       description: "Visualização estratégica de métricas.",
       image:
         "https://dashboardacademy.com.br/wp-content/uploads/2023/09/inspiracao-para-dashboard-gerencial-modelo-3.png",
-      buttonText: "Interagir",
+      buttonText: "Clique para interagir",
+      url: "https://www.google.com",
     },
     {
       title: "Projeto Extra",
@@ -83,7 +88,8 @@ function Projects() {
       description: "Projeto adicional para teste de páginas.",
       image:
         "https://dashboardacademy.com.br/wp-content/uploads/2023/09/inspiracao-para-dashboard-gerencial-modelo-3.png",
-      buttonText: "Ver projeto",
+      buttonText: "Clique para interagir",
+      url: "https://www.google.com",
     },
     {
       title: "Projeto Extra",
@@ -91,7 +97,8 @@ function Projects() {
       description: "Projeto adicional para teste de páginas.",
       image:
         "https://dashboardacademy.com.br/wp-content/uploads/2023/09/inspiracao-para-dashboard-gerencial-modelo-3.png",
-      buttonText: "Ver projeto",
+      buttonText: "Clique para interagir",
+      url: "https://www.google.com",
     },
   ];
 
@@ -140,7 +147,10 @@ function Projects() {
                 <ProjectTitle>{projects.title}</ProjectTitle>
                 <ProjectSubTitle>{projects.subTitle}</ProjectSubTitle>
                 <ProjectDescription>{projects.description}</ProjectDescription>
-                <ProjectsButton>{projects.buttonText}</ProjectsButton>
+                <ProjectsButton
+                  onClick={() => window.open(projects.url, "_blank")}>
+                  {projects.buttonText}
+                </ProjectsButton>
               </ProjectsContent>
             </ProjectsCard>
           ))}
