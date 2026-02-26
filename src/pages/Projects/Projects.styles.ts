@@ -49,7 +49,7 @@ export const ProjectsContent = styled.div`
   color: white;
 `;
 
-export const ProjectsList = styled.section`
+export const ProjectsList = styled.div`
   width: 100%;
   max-width: 1100px;
 

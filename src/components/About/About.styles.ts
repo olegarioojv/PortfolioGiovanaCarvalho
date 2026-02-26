@@ -76,7 +76,7 @@ export const Experience = styled.p`
   }
 `;
 
-export const SkillContainer = styled.section`
+export const SkillContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
@@ -129,7 +129,7 @@ export const SkillDescription = styled.p`
   color: #e5e7eb;
 `;
 
-export const ContactContainer = styled.section`
+export const ContactContainer = styled.div`
   margin-top: 40px;
   padding: 20px;
 `;

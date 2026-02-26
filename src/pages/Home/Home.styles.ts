@@ -4,7 +4,7 @@ interface ButtonProps {
   active?: boolean;
 }
 
-export const Hero = styled.section`
+export const Hero = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
